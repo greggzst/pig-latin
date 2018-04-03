@@ -1,7 +1,7 @@
 def pig_latin(arr)
   pig = []
   arr.each do |elem|
-    case elem[0]
+    case elem
     when 'a','e','i','o','u'
       pig << vowel_pig(elem)
     else
@@ -17,8 +17,8 @@ def vowel_pig(word)
 end
 
 def consonant_pig(word)
-  after_cons = word.slice!(1,word.length)
-  word.insert(0,after_cons)
+  after_cons = word.slice!(1, word.length)
+  word.insert(0, after_cons)
   word << "ay"
 end
 
